@@ -1,0 +1,266 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Futura-light';
+    src: url('/assets/fonts/Futura\ Light.ttf');
+}
+@font-face {
+    font-family: 'Futura-bold';
+    src: url('/assets/fonts/Futura\ Bold.ttf');
+}
+@font-face {
+    font-family: 'Futura-medium';
+    src: url('/assets/fonts/Futura\ Medium.ttf');
+}
+@font-face {
+    font-family: 'Futura-book';
+    src: url('/assets/fonts/Futura\ Book.ttf');
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+}
+.main .wrapper{
+    width: 100%;
+    max-width: 1512px;
+    padding: 40px 121px;
+}
+.main .wrapper nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .wrapper nav .right{
+    display: flex;
+    align-items: center;
+}
+.main .wrapper nav .right ul{
+    display: flex;
+    align-items: center;
+}
+.main .wrapper nav .right ul li{
+    list-style: none;
+    margin-right: 92px;
+    font-family: 'Futura-medium';
+    font-size: 24px;
+    color: #767676;
+}
+.main .wrapper nav .right ul a{
+    list-style: none;
+    margin-right: 92px;
+    font-family: 'Futura-medium';
+    font-size: 24px;
+    color: #767676;
+}
+.main .wrapper nav .right ul a.active{
+    color: #000;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #fff;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-text .highlight {
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+.hero-text .btn {
+    padding: 10px 20px;
+    background-color: #467A58;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero-images {
+   display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line if needed */
+    gap: 10px; /* Add space between images */
+    justify-content: center; /* Align images horizontally in the center */
+    align-items: flex-start;
+    max-width: 45%;
+}
+
+.hero-images img {
+ object-fit: cover; /* Ensure images keep their aspect ratio */
+    transition: transform 0.2s ease-in-out; /* Optional hover effect */
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+}
+
+.image1 {
+    width: 200px;
+    height: 150px;
+}
+
+.image2 {
+    width: 300px;
+    height: 200px;
+}
+
+.image3 {
+    width: 250px;
+    height: 175px;
+}
+
+.image4 {
+    width: 150px;
+    height: 100px;
+}
+
+
+/* Top Picks Section */
+.top-picks {
+    padding: 40px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+
+.top-picks h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.top-picks .highlight {
+    font-weight: bold;
+}
+
+.top-picks p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: gray;
+}
+
+.picks-images {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.picks-images {
+    height: 200px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picks-images img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center
+}
+
+/* Footer */
+.main .wrapper footer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 58px;
+    padding: 67px 0;
+}
+.main .wrapper footer .logo img{
+    width: 70%;
+}
+.main .wrapper footer .right{
+    display: flex;
+    gap: 85px;
+}
+.main .wrapper footer .right ul li{
+    list-style: none;
+    font-size: 24px;
+    margin-bottom: 29px;
+    font-family: 'Futura-medium';
+}
+.main .wrapper footer .right ul li .top{
+    margin-bottom: 58px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1100px) {
+    .main .wrapper{
+        padding: 20px 50px;
+    }
+
+    .main .wrapper nav{
+        flex-wrap: wrap;
+        position: relative;
+        height: 10vh;
+        overflow-y: hidden;
+        padding: 10px;
+        transition: height 1s ease-in-out;
+    }
+    .main .wrapper nav.on{
+        height: 18vh;
+    }
+    .main .wrapper nav .right{
+        width: 100%;
+    }
+    .main .wrapper nav .bars{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 30px;
+        font-size: 30px;
+        padding-right: 10px;
+    }
+    .main .wrapper nav .right {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main .wrapper nav .right ul{
+        flex-direction: column;
+    }
+    .main .wrapper nav .right ul li{
+    margin-right: 0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    }
+   
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-images {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .picks-images {
+        flex-direction: column;
+        align-items: center;
+    }
+}
